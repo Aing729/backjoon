@@ -1,0 +1,12 @@
+x보다 작은수 문제(백준 10871)
+N으로 된 수열A(리스트로하는게 편할듯)
+정수X
+첫줄 N과 X : n,x = map(int,input().split())
+A내용 주어짐. A=int(input())
+for로 반복시키고 if로 거르는게 정배일듯
+최종 코드
+n,x = map(int,input().split())
+A=list(map(int,input().split()))
+for i in range(len(A)):
+    if A[i] < x:
+        print(A[i],end=" ")
