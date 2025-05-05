@@ -1,0 +1,14 @@
+N몇갠지 숫자 받기 n=int(input())
+공백 없이 n개 받기 잠만 이러면 split못쓰는거 아닌가? 그럼 그냥 수를 받은 다음
+각 자릿수 더하는 방식으로 하면 될듯.
+k=int(inpit())
+for 써서 str로 k 받은 다음 그럼 k가 i에 들어가 반복되니 가상의 변수 S=0이런거 놓고 여기다가
++=i 해주면 될듯 
+최종 코드
+n=int(input())
+k=int(input())
+s=0
+for i in str(k):
+    s += int(i)
+print(s)
+  
