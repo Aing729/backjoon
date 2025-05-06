@@ -1,0 +1,4 @@
+일단 2수 받기(a,b=map(int,input().split()))
+if로 비교 a>b yes else no
+테스트 케이스 여러개라고 하니 while true로 계속 받아햐 하지 않나
+그리고 if 0 0이면 break
