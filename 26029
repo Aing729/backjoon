@@ -1,0 +1,14 @@
+그냥 8자리수를 받고 거기서 0,1 아닌수 있으면 F 없으면 S라는거 같음.
+if로 검증하고 for로 반복하면 될듯?
+a=list(map(int,input().split())) 귀찮아서 리스트로 받음
+각 자리 인덱싱해서 조사하면 되는거니까
+최종 코드
+a=list(map(int,input().split()))
+for i in range(len(a)):
+    if a[i] == 1 or a[i] == 0:
+        continue
+    else:
+        print("F")
+        exit()
+print("S")
+F되느 순간 exit으로 코드 강종하고 뭐 F안나오면 그냥 쭉 돌다가 S나오는거고
