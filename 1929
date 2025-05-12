@@ -1,0 +1,36 @@
+맨처음엔 단순한 코드라고 생각함.
+n,m 받고 n~m까지 반복 하는데 i이면 넘기고, i를 j로 계속해서 나누어서 나누어 떨어진 수가 2개면 i를 프린트
+n,m=map(int,input().split())
+for i in range(n,m+1):
+    if i == 1:
+        continue
+    count = 0
+    for j in range(1,i+1):
+        if i%j == 0:
+            count += 1
+    if count == 2:
+        print(i)
+이런 느낌, 근데 시간 초과 뜸.
+우선 리스트로 푼게 특징
+인풋값 리스트에 넣고 판별한 리스트 하나더 만들어야함. 에라토스테네스의 체에서 따왔는데. 2부터 루트i(정수로)까지 쭉 반복해서 나누어 떨어지는 걸 찾아야함. 찾으면 판별 리스트에 추가!, 이거 반복
+다른 코드
+n, m = map(int, input().split())
+li = []
+for i in range(n, m + 1):
+    li.append(i)
+sosu = []
+
+for i in li:
+    if i < 2:
+        continue
+    tf = True
+    for j in range(2, int(i ** 0.5) + 1):
+        if i % j == 0:
+            tf = False
+            break
+    if tf:
+        sosu.append(i)
+for p in sosu:
+    print(p)
+
+여기서 필요한게 에라토스테네스의 체써야 할듯. 소수찾는 건
