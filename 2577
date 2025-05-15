@@ -1,0 +1,8 @@
+a,b,c 인ㅜㅅ 받고 리스트로 정렬 그리고 count 내장함수 사용하여 프린트하면 끝. 근데 ㅇ렇게만 하면 짜침
+a=int(input())
+b=int(input())
+c=int(input())
+li=list(str(a*b*c))
+for i in range(0,10):
+    print(li.count(str(i)))
+일단 코드
